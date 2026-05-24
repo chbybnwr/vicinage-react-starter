@@ -1,0 +1,32 @@
+{
+  "image": "mcr.microsoft.com/devcontainers/javascript-node:4-24-trixie",
+  "postCreateCommand": "npm install",
+  "postAttachCommand": {
+    "server": "npm run dev"
+  },
+  "portsAttributes": {
+    "5173": {
+      "label": "Application",
+      "onAutoForward": "openPreview"
+    }
+  },
+  "customizations": {
+    "codespaces": {
+      "openFiles": [
+        "README.md",
+        "src/App.tsx"
+        //
+      ]
+    },
+    "vscode": {
+      "settings": {
+        "workbench.secondarySideBar.defaultVisibility": "hidden"
+      },
+      "extensions": [
+        "typescriptteam.native-preview",
+        "dbaeumer.vscode-eslint",
+        "zokugun.explicit-folding"
+      ]
+    }
+  }
+}
