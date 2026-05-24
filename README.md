@@ -1,73 +1,31 @@
-# React + TypeScript + Vite
+# Vicinage + React
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+This template provides a minimal setup to get [Vicinage](https://github.com/chbybnwr/vicinage) + React working.
 
-Currently, two official plugins are available:
+[![Open in Codespaces](https://img.shields.io/badge/codespaces-1f2328?logo=github&style=for-the-badge)](https://codespaces.new/chbybnwr/vicinage-react-starter) [![Open in CodeSandbox](https://img.shields.io/badge/codesandbox-e4ff80?logo=codesandbox&style=for-the-badge&logoColor=191919)](https://codesandbox.io/s/github/chbybnwr/vicinage-react-starter) [![Open in StackBlitz](https://img.shields.io/badge/stackblitz-1689f8?logo=stackblitz&style=for-the-badge)](https://stackblitz.com/~/github/chbybnwr/vicinage-react-starter)
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Oxc](https://oxc.rs)
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/)
+## Getting Started
 
-## React Compiler
+First, run the development server:
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
-
-## Expanding the ESLint configuration
-
-If you are developing a production application, we recommend updating the configuration to enable type-aware lint rules:
-
-```js
-export default defineConfig([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
-
-      // Remove tseslint.configs.recommended and replace with this
-      tseslint.configs.recommendedTypeChecked,
-      // Alternatively, use this for stricter rules
-      tseslint.configs.strictTypeChecked,
-      // Optionally, add this for stylistic rules
-      tseslint.configs.stylisticTypeChecked,
-
-      // Other configs...
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
+```bash
+npm run dev
+# or
+yarn dev
+# or
+pnpm dev
+# or
+bun dev
 ```
 
-You can also install [eslint-plugin-react-x](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-x) and [eslint-plugin-react-dom](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-dom) for React-specific lint rules:
+Open [http://localhost:5173](http://localhost:5173) with your browser to see the result.
 
-```js
-// eslint.config.js
-import reactX from 'eslint-plugin-react-x'
-import reactDom from 'eslint-plugin-react-dom'
+You can start editing the page by modifying `src/App.tsx`. The page auto-updates as you edit the file.
 
-export default defineConfig([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
-      // Enable lint rules for React
-      reactX.configs['recommended-typescript'],
-      // Enable lint rules for React DOM
-      reactDom.configs.recommended,
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
-```
+## Learn More
+
+To learn more about Vicinage, take a look at the following resources:
+
+- [Vicinage Documentation](https://github.com/chbybnwr/vicinage) - learn about Vicinage features and API.
+
+You can check out [the Vicinage GitHub repository](https://github.com/chbybnwr/vicinage) - your feedback and contributions are welcome!
